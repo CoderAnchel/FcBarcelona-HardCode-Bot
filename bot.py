@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv('BOT_TOKEN')
+LEWAN_IMG = os.getenv('LEWANDOWSKI_IMG')
+PEDRI_IMG = os.getenv('PEDRI_IMG')
 
 
 
@@ -57,7 +59,7 @@ async def pedri(ctx):
     usuario = ctx.message.author
     await ctx.send(usuario )
     await ctx.send("Estos datos son de todas las temporadas")
-    await ctx.send('https://www.fcbarcelona.com/photo-resources/2022/07/01/6c5b1089-95a7-4599-bb04-c91235363747/pedri.png?width=670&height=790')
+    await ctx.send(PEDRI_IMG)
     await ctx.send('numero: 8, nacionalidad: 🇪🇸, goles: 9, asistencias: 7, partidos: 76' )
     
 @bot.command()
@@ -65,18 +67,17 @@ async def Pedri(ctx):
     usuario = ctx.message.author
     await ctx.send(usuario )
     await ctx.send("Estos datos son de todas las temporadas")
-    await ctx.send('https://www.fcbarcelona.com/photo-resources/2022/07/01/6c5b1089-95a7-4599-bb04-c91235363747/pedri.png?width=670&height=790')
+    await ctx.send(PEDRI_IMG)
     await ctx.send('numero: 8, nacionalidad: 🇪🇸, goles: 9, asistencias: 7, partidos: 76' )
     
     
-
 #Lewandowski
 @bot.command()
 async def Lewandowski(ctx):
     usuario = ctx.message.author
     await ctx.send(usuario )
     await ctx.send("Estos datos son de todas las temporadas")
-    await ctx.send('https://media.discordapp.net/attachments/1011805124324237433/1011809361489825813/FaCU_Z6XEAAs6x5.jpg?width=620&height=775')
+    await ctx.send(LEWAN_IMG)
     await ctx.send('numero: 9, nacionalidad: 🇵🇱,  goles: 2, asistencias: 0, partidos: 2')
     
 @bot.command()
@@ -84,8 +85,7 @@ async def lewandowski(ctx):
     usuario = ctx.message.author
     await ctx.send(usuario )
     await ctx.send("Estos datos son de todas las temporadas")
-    await ctx.send('https://media.discordapp.net/attachments/1011805124324237433/1011809361489825813/FaCU_Z6XEAAs6x5.jpg?width=620&height=775')
+    await ctx.send(LEWAN_IMG)
     await ctx.send('numero: 9, nacionalidad: 🇵🇱,  goles: 2, asistencias: 0, partidos: 2')
     
 bot.run(TOKEN)
-
