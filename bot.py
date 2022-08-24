@@ -1,6 +1,13 @@
 import discord #importamos para conectarnos con el bot
 from discord.ext import commands #importamos los comandos
 import datetime 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TOKEN = os.getenv('BOT_TOKEN')
+
 
 
 intents = discord.Intents.default()
@@ -80,5 +87,5 @@ async def lewandowski(ctx):
     await ctx.send('https://media.discordapp.net/attachments/1011805124324237433/1011809361489825813/FaCU_Z6XEAAs6x5.jpg?width=620&height=775')
     await ctx.send('numero: 9, nacionalidad: 🇵🇱,  goles: 2, asistencias: 0, partidos: 2')
     
-bot.run("MTAxMTc4ODU3MTU0MTI1MDA2OQ.GZGInn.H_GBThOseip-la8HAQl1XjXy3PW7G0RLioTVBo")
+bot.run(TOKEN)
 
